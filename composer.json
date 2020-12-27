@@ -1,0 +1,20 @@
+{
+    "name": "ipagesoftware/scw",
+    "description": "Sistema Gestor Web",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Diógenes Dias",
+            "email": "diogenesdias@hotmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }    
+}
+
