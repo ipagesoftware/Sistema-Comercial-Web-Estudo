@@ -1,0 +1,109 @@
+ErrorDocument 404 /404.php
+IndexIgnore *
+
+# EVITA A LISTAGEM DOS ARQUIVOS NO DIRET?RIO
+Options -Indexes
+RewriteEngine on
+
+#
+#   ___           __   _                   __         __ __ ______ ______   ___    ____
+#  / _ \ ___  ___/ /  (_)  ____ ___  ____ / /_       / // //_  __//_  __/  / _ \  / __/
+# / , _// -_)/ _  /  / /  / __// -_)/ __// __/      / _  /  / /    / /    / ___/ _\ \  
+#/_/|_| \__/ \_,_/  /_/  /_/   \__/ \__/ \__/      /_//_/  /_/    /_/    /_/    /___/  
+#                                                                                      
+#
+
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteCond %{HTTPS} off
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^([a-z,0-9,A-Z,_-]+)$ $1.php
+
+# ESCONDE AS EXTENÇÕES DE TODOS OS ARQUIVOS DO SITE
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^session_expired([a-zA-Z0-9-_/]+)/?$ application/views/access/session/index.php?=$1 [L,QSA]
+###### start: ACCESSO ####
+# LOGIN
+RewriteRule ^login([a-zA-Z0-9-_/]+)/?$ application/views/access/login/index.php?=$1 [L,QSA]
+# ESQUECI A SENHA
+RewriteRule ^esqueci_senha([a-zA-Z0-9-_/]+)/?$ application/views/access/esqueci_senha/index.php?=$1 [L,QSA]
+# PERMISSOES
+RewriteRule ^permissoes([a-zA-Z0-9-_/]+)/?$ application/views/access/permissoes/index.php?=$1 [L,QSA]
+# USUARIOS
+RewriteRule ^usuarios/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/access/usuarios/addupdt.php?=$1 [L,QSA]
+RewriteRule ^usuarios([a-zA-Z0-9-_/]+)/?$ application/views/access/usuarios/index.php?=$1 [L,QSA]
+###### start: CADASTROS ####
+# CLIENTE
+RewriteRule ^cliente/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/cliente/addupdt.php?=$1 [L,QSA]
+RewriteRule ^cliente([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/cliente/index.php?=$1 [L,QSA]
+# EMPRESA
+RewriteRule ^empresa/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/empresa/addupdt.php?=$1 [L,QSA]
+RewriteRule ^empresa([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/empresa/index.php?=$1 [L,QSA]
+# VENDEDOR X CLIENTE
+RewriteRule ^vendedor_cliente([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/vendedor_cliente/index.php?=$1 [L,QSA]
+# USUÁRIO X VENDEDOR
+RewriteRule ^users_vendedor([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/users_vendedor/index.php?=$1 [L,QSA]
+# VENDEDOR
+RewriteRule ^vendedor/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/vendedor/addupdt.php?=$1 [L,QSA]
+RewriteRule ^vendedor([a-zA-Z0-9-_/]+)/?$ application/views/cadastros/vendedor/index.php?=$1 [L,QSA]
+###### end: CADASTROS ####
+###### start: ESTOQUE ####
+RewriteRule ^movimentacao([a-zA-Z0-9-_/]+)/?$ application/views/estoque/movimentacao/index.php?=$1 [L,QSA]
+###### end: ESTOQUE ####
+
+###### start: PRODUTO ####
+# PRODUTO
+RewriteRule ^produto/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/produto/produto/addupdt.php?=$1 [L,QSA]
+RewriteRule ^produto([a-zA-Z0-9-_/]+)/?$ application/views/produto/produto/index.php?=$1 [L,QSA]
+# FABRICANTE
+RewriteRule ^fabricante/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/produto/fabricante/addupdt.php?=$1 [L,QSA]
+RewriteRule ^fabricante([a-zA-Z0-9-_/]+)/?$ application/views/produto/fabricante/index.php?=$1 [L,QSA]
+# FORNECEDOR
+RewriteRule ^fornecedor/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/produto/fornecedor/addupdt.php?=$1 [L,QSA]
+RewriteRule ^fornecedor([a-zA-Z0-9-_/]+)/?$ application/views/produto/fornecedor/index.php?=$1 [L,QSA]
+# GRUPO
+RewriteRule ^grupo/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/produto/grupo/addupdt.php?=$1 [L,QSA]
+RewriteRule ^grupo([a-zA-Z0-9-_/]+)/?$ application/views/produto/grupo/index.php?=$1 [L,QSA]
+# UM
+RewriteRule ^um/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/produto/um/addupdt.php?=$1 [L,QSA]
+RewriteRule ^um([a-zA-Z0-9-_/]+)/?$ application/views/produto/um/index.php?=$1 [L,QSA]
+###### end: PRODUTO ####
+
+###### start: FINANCEIRO ####
+# SELEÇÃO PROCEDECIA
+RewriteRule ^sel_procedencia([a-zA-Z0-9-_/]+)/?$ application/views/financeiro/sel_procedencia/index.php?=$1 [L,QSA]
+# PROCEDENCIA x USUÁRIOS
+RewriteRule ^procedencia_users/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/financeiro/procedencia_users/addupdt.php?=$1 [L,QSA]
+RewriteRule ^procedencia_users([a-zA-Z0-9-_/]+)/?$ application/views/financeiro/procedencia_users/index.php?=$1 [L,QSA]
+# PROCEDENCIA
+RewriteRule ^procedencia/addupdt([a-zA-Z0-9-_/]+)/?$ application/views/financeiro/procedencia/addupdt.php?=$1 [L,QSA]
+RewriteRule ^procedencia([a-zA-Z0-9-_/]+)/?$ application/views/financeiro/procedencia/index.php?=$1 [L,QSA]
+# BANCO
+RewriteRule ^banco/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^banco([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+# CARTAO DE CREDITO
+RewriteRule ^cartao_credito/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^cartao_credito([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+# CONTAS PAGAR
+RewriteRule ^contas_pagar/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^contas_pagar([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+# CONTAS RECEBER
+RewriteRule ^contas_receber/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^contas_receber([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+# RECIBO
+RewriteRule ^recibo/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^recibo([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+# FORMAS PAGAMENTO
+RewriteRule ^formas_pagamento/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^formas_pagamento([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+# PLANO CONTAS
+RewriteRule ^plano_contas/addupdt([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+RewriteRule ^plano_contas([a-zA-Z0-9-_/]+)/?$ 404.php?=$1 [L,QSA]
+###### end: FINANCEIRO ####
+###### start: AJUDA ####
+RewriteRule ^termos_uso([a-zA-Z0-9-_/]+)/?$ termos_uso.php?pg=$1 [L,QSA]
+RewriteRule ^politica_privacidade([a-zA-Z0-9-_/]+)/?$ politica_privacidade.php?pg=$1 [L,QSA]
+RewriteRule ^info([a-zA-Z0-9-_/]+)/?$ info.php?pg=$1 [L,QSA]
+###### end: AJUDA ####
