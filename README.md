@@ -470,3 +470,13 @@ composer install
 na pasta onde o arquivo composer.json se encontra.
 
 Após este procedimento os arquivos de autoload estarão configurados.
+
+## Banco de dados
+O banco de dados encontra-se na pasta sql.
+
+root -> sql
+
+Importe o arquivo banco_de_dados.sql em seu gerenciador de banco de dados.
+
+Caso não tenha nenhum gerenciador de banco de dados eu sugiro o heidisql:
+https://www.heidisql.com/download.php
