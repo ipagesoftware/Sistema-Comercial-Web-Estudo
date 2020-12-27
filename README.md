@@ -480,3 +480,8 @@ Importe o arquivo banco_de_dados.sql em seu gerenciador de banco de dados.
 
 Caso não tenha nenhum gerenciador de banco de dados eu sugiro o heidisql:
 https://www.heidisql.com/download.php
+
+## Sublime Text
+
+Para quem utiliza o Sublime text como seu editor de script, na raiz temos o arquivo do projeto:
+scw_estudo.sublime-project
