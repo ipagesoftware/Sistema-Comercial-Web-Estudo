@@ -1,0 +1,21 @@
+/** BACK TO TOP */
+#back-to-top, .touch-device #back-to-top:hover {
+  background: url(arrow-up-large.png) no-repeat center center;
+  background-color: rgb(51, 51, 51);
+  background-color: rgba(51, 51, 51, .7);
+  bottom: 10px;
+  color: transparent;
+  display: none;
+  font: 0/0 a;
+  height: 46px;
+  position: fixed;
+  right: 10px;
+  text-shadow: none;
+  -webkit-transition: all .2s ease;
+     -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+   -o-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 45px;
+  z-index: 100000000;
+}

@@ -1,0 +1,16 @@
+JSFromHell.com @ http://jsfromhell.com
+--------------------------------------
+
+Nome: Extenso
+URL: http://jsfromhell.com/string/extenso
+Autor: Carlos R. L. Rodrigues
+Criado: 2005.12.06
+Modificado: 2009.07.04
+Descrição:
+Escreve números com até 63 dígitos por extenso, em Português. Também suporta números em formato moeda utilizando a virgula (,) como separador decimal.
+
+Para se manter atualizado, assine o feed ATOM em: http://jsfromhell.com/pt/feed/atom.xml
+
+Autorizamos a cópia e modificação de todos os códigos contidos no site, desde que se mantenha os créditos do autor original
+Caso você tenha algum código que julgue ser indispensável, propostas de emprego, pedidos de implementação, sugestões ou se encontrou problemas no site, entre em contato conosco.
+Não nos responsabilizamos por qualquer prejuízo, direto ou indireto, que possa surgir em virtude da utilização de nossos códigos/site ou qualquer site que esteja disponível por meio de hiperlink em nosso site.

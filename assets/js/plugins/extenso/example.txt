@@ -1,0 +1,20 @@
+<form id="form" action="">
+	<fieldset>
+	<legend>Número por extenso</legend>
+	Currency ? <input type="checkbox" name="cur" id="cur" value="" /><br />
+	Número <input type="text" name="num" /><br /><br />
+	<input type="submit" value="String.extenso()" />
+	</fieldset>
+</form>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var f = document.forms.form;
+addEvent(f, "submit", function(e){
+	e.preventDefault();
+	alert(f.num.value.extenso(f.cur.checked));
+});
+
+//]]>
+</script>

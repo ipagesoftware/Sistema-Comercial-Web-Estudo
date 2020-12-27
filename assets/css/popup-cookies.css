@@ -1,0 +1,67 @@
+.popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  background: #303030;
+  min-height: 150px;
+  bottom: 0px;
+  z-index: 99999;
+  padding-top: 30px;
+  opacity: 0.95;
+}
+
+.cont {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.popup .btnFechar {
+  position: absolute;
+  right: 2%;
+  top:10px;
+}
+
+.popup .btnFechar a {
+  color:#fff !important;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.popup p {
+  color: #fff;
+  text-align:center;
+  font-size: 16px;
+}
+
+.popup p a {
+  color:#fff;
+  text-decoration:underline;
+}
+
+.btnAceite {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btnAceite a {
+  background:#004f71;
+  color: #fff !important;
+  font-size: 14px;
+  text-decoration: none !important;
+  padding: 12px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 0px 10px 10px 10px;
+  cursor: pointer;
+}
+
+#closePopupCookies,
+#cookieCupomAgree,
+#cookieDescontoAgree {
+  cursor: pointer;
+}
+
+.btnAceiteHref {
+  cursor: pointer !important;
+}

@@ -1,0 +1,6 @@
+String.extenso([currency: Boolean = false]): String
+
+	Retorna um número escrito por extenso em Português. Pode ser ou não em formato moeda.
+	
+		currency indica se o valor será escrito como moeda, seu valor padrão é false.
+	

@@ -1,0 +1,67 @@
+#ipage_popup_container {
+	/*border: solid 2px #fff;/* COR DA BORDA DO ALERT */
+	color: #000;/* COR DO TEXTO DO ALERT*/
+  background-color: #fff;/* COR DE FUNDO DO ALERT*/
+  border: solid 1px #337ab7;
+	min-width: 250px; /* Dialog will be no smaller than this */
+	max-width: 450px; /* Dialog will wrap after this width */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#ipage_popup_title {
+	/*
+  font-size: 14px;
+	font-weight: bold;
+  */
+  color: #fff;
+  background: #337ab7;/* #37a947 url(../../../../assets/plugins/jquery-ui/images/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat-x;*/
+  border-bottom: solid 1px #337ab7;/* COR DA BORDA INFERIOR DO TÍTULO DO ALERT*/
+	text-align: center;
+	line-height: 1.75em;
+	cursor: default;
+	padding: 0em;
+	margin: 0em;
+}
+
+#ipage_popup_content {
+	/*background: 16px 16px no-repeat url(images/info.gif);*/
+  background: #fff;
+	padding: 1em 1.75em;
+	margin: 0em;
+  color: #6e6e6e;
+}
+
+#ipage_popup_content.critical {
+		background: 2px 10px no-repeat url(../img/icon-box-critical.png); float: left;
+}
+
+/*
+#ipage_popup_content.alert {
+	background-image: url(images/info.gif);
+}
+*/
+
+#ipage_popup_content.confirm {
+		background: 2px 10px no-repeat url(../img/icon-box-warning.png); float: left;
+}
+*
+#ipage_popup_content.question {
+	background: 2px 10px no-repeat url(../img/icon-box-question.png); float: left;
+}
+#ipage_popup_content.prompt {
+	background: 2px 10px no-repeat url(../img/icon-box-info.png); float: left;
+}
+#ipage_popup_message {
+	/*margin-left: 18px;*/
+}
+
+#ipage_popup_panel {
+	text-align: center;
+	margin: 1em 0em 0em 1em;
+}
+
+#ipage_popup_prompt {
+	margin: .5em 0em;
+}
