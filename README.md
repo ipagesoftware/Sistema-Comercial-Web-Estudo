@@ -485,3 +485,27 @@ https://www.heidisql.com/download.php
 
 Para quem utiliza o Sublime text como seu editor de script, na raiz temos o arquivo do projeto:
 scw_estudo.sublime-project
+
+## Maiores informações
+
+Você poderá ler um pequeno manual em PDF (Manual configuração SCW) que está na pasta raiz.
+https://github.com/ipagesoftware/scw/blob/main/Manual%20configura%C3%A7%C3%A3o%20SCW.pdf
+
+
+## Nossos canais 
+
+## WhatsApp
+
+Grupo dedicado a aulas particulares de programação.
+https://chat.whatsapp.com/I8f5BSqSeSG9HoQYiNVYAf
+
+## Telegram
+Grupo no Telegram:
+
+https://t.me/codigo_limpo
+
+## Web Site
+
+Site da Ipage:
+https://www.ipage.com.br/
+
