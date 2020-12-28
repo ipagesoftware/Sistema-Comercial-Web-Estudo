@@ -355,6 +355,10 @@ class LayoutMenuClass
         $t .= '<a href="https://github.com/ipagesoftware/" target="_blank">' . $icon . ' GitHub</a>';
         
         $t .= '<li>';
+        $icon = '<i class="fa fa-fw fa-external-link"></i> ';        
+        $t .= '<a href="https://www.ipage.com.br/ipage/contato/" target="_blank">' . $icon . ' Fale Conosco</a>';
+        
+        $t .= '<li>';
         $icon = '<i class="fa fa-fw fa-info-circle"></i> ';
         //
         $url = URL . 'about.php';
@@ -362,7 +366,7 @@ class LayoutMenuClass
         $height = '470px';
         $t .= '<a href="javascript:;" onclick="ipageViews.viewReg(\''. $url . '\', \'' . $title . '\', \'' . $height . '\');">' . $icon . ' Sobre...</a>';
 
-        // url, title, height, large_small, showbtn, callback"
+        
         $t .= '<li>';
         $icon = '<i class="fa fa-fw fa-cogs"></i> ';        
         $t .= '<a href="' . URL . 'info/" target="_blank">' . $icon . ' Informações...</a>';
