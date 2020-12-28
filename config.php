@@ -56,7 +56,7 @@ if (strtolower($_SERVER['HTTP_HOST']) == 'localhost') {
 
 if (strtolower($_SERVER['HTTP_HOST']) == 'localhost') {
     // Modificar para a sua pasta local
-    define('URL', 'http://localhost/scw-main/login/');
+    define('URL', 'http://localhost/scw-main/');
 } else {
     // Modificar para a pasta do seu servidor
     define('URL', 'https://www.seu_dominio.com.br');
