@@ -25,8 +25,7 @@ define('URL_WEBSERVICE_SETTINGS', "https://www.ipage.com.br/framework/lavorox/ac
 // Não modificar
 define('COOKIE_KEY', 'TSZsyrf6FfqbyHCIpfnpqD771XxwBbGpujt07LFLhVeMNSQyzMCUsONC'); 
 // Chave responsável pela licença de uso
-define("ACCESS_KEY", "ZW1haWw9ZGlvZ2VuZXNkaWFzQGhvdG1haWwuY29tJm5vbWU9RElPR0VORVMgRElBUyBERSBTT1VaQSBKUiZwbGFubz1MRUFSTklORyZhcHBfbmFtZT1TQ1cgLSBTaXN0ZW1hIENvbWVyY2lhbCBXZWIgKGVzdHVkbykmaWQ9MjA=");
-#define("ACCESS_KEY", "COLOQUE AQUI O SUA CHAVE");
+define("ACCESS_KEY", "COLOQUE AQUI O SUA CHAVE");
 // Solicite a sua chave desta api no link abaixo:
 // https://ipage.com.br/ipage/wskey_produto/
 define("API_PRODUTOS", "1f1f510b7cf211ea8dca525400c9158a");
