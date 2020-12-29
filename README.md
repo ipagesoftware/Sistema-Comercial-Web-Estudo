@@ -1,4 +1,4 @@
-# scw
+# Sistema Comercial Web - SCW (estudo)
 ## O projeto
 
 Aplicação de estudo CRUD estilo painel administrativo contruída com PHP, MariaDB, JavaScript, JQuery, HTML 5, CSS3 e BootStrap.
