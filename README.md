@@ -11,9 +11,9 @@ Saber criar um CRUD, entender como funcionam as requisições em AJAX, o que é 
 
 https://www.ipagesoftware.com.br/scw/www/
 
-Os dados de acesso são:
-email: curso@ipage.com.br
-senha: 123456
+## Dados acesso
+* email: curso@ipage.com.br
+* senha: 123456
 
 ## Características
 
