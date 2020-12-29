@@ -7,6 +7,14 @@ Esta aplicação tem o objetivo de ensinar conceitos da programação relacionad
 
 Saber criar um CRUD, entender como funcionam as requisições em AJAX, o que é um layout responsivo, como gerir banco de dados? Dentre outras rotinas do dia a dia do desenvolvimento web.
 
+## Visualizar
+
+https://www.ipagesoftware.com.br/scw/www/
+
+Os dados de acesso são:
+email: curso@ipage.com.br
+senha: 123456
+
 ## Características
 
 * Aplicação em PHP 7 (https://pt.wikipedia.org/wiki/PHP) ou superior com controle de rotas definidas no arquivo .htaccess (https://pt.wikipedia.org/w/index.php?search=htaccess&title=Especial%3APesquisar&go=Ir&ns0=1).
