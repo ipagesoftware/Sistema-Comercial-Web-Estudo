@@ -3,7 +3,7 @@
  * @version    1.0
  * @package    Acesso
  * @subpackage Esqueci a Senha
- * @author     DiÛgenes Dias <diogenesdias@hotmail.com>
+ * @author     Di√≥genes Dias <diogenesdias@hotmail.com>
  * @copyright  Copyright (c) 1995-2021 Ipage Software Ltd. (https://www.ipage.com.br)
  * @license    https://www.ipagesoftware.com.br/license_key/www/examples/license/
  */
@@ -29,7 +29,7 @@ $js .= '</script>';
 $sid->start();
 //
 if ($sid->check()) {
-    // J· estamos logados
+    // J√° estamos logados
     exit($js);
 }
 //
@@ -42,7 +42,7 @@ if ($ret != 'OK') {
 $pdo = $conn->openDatabase();
 //
 if (!$pdo) {
-    return 'Erro ao iniciar a conex„o';
+    return 'Erro ao iniciar a conex√£o';
 }
 //
 $sql = "SELECT";
@@ -59,11 +59,11 @@ $rs = $query->fetch(PDO::FETCH_BOTH);
 if ($query->rowCount() > 0) {
     if ($rs['user_status'] == 0) {
         $json = array('id' => 'txtemail',
-            'msg'=> utf8_encode('O usu·rio informado est· desabilitado temporariamente. <br>Entre em contato com o usu·rio administrador para maiores informaÁıes!'),
+            'msg'=> utf8_encode('O usu√°rio informado est√° desabilitado temporariamente. <br>Entre em contato com o usu√°rio administrador para maiores informa√ß√µes!'),
         );
         die(json_encode($json));
     }
-    // DEFINO AS VARI¡VEIS DA SESS√O PARA O LOGIN
+    // DEFINO AS VARI√ÅVEIS DA SESS√ÉO PARA O LOGIN
     sendEmail($rs['user_email'], $rs['user_login'], $rs['user_email'], $validar->newpwd);
     /** ATUALIZO A BASE DE DADOS */
     $sql = "UPDATE ";
@@ -82,7 +82,7 @@ if ($query->rowCount() > 0) {
     die('OK');
 } else {
     $json = array('id' => 'txtemail',
-        'msg'=> utf8_encode('Usu·rio ou senha inv·lidos, verifique!'),
+        'msg'=> utf8_encode('Usu√°rio ou senha inv√°lidos, verifique!'),
     );
     die (json_encode($json));
 }
@@ -100,12 +100,12 @@ function sendEmail($email, $nome_do_remetente, $email_remetente, $newpwd)
     if (strtolower($_SERVER['HTTP_HOST']) == 'localhost') {
         return;
         $json = array('id' => 'txtemail',
-            'msg'=> utf8_encode('O envio do e-mail sÛ È possÌvel em um servidor web.'),
+            'msg'=> utf8_encode('O envio do e-mail s√≥ √© poss√≠vel em um servidor web.'),
         );
         die(json_encode($json));
     }
     //
-    // Envia um e-mail para o usu·rio com a confirmaÁ„o da operaÁ„o
+    // Envia um e-mail para o usu√°rio com a confirma√ß√£o da opera√ß√£o
     //
     $nome_do_remetente = ucwords(strtolower($nome_do_remetente));
     $emaildestinatario = $email;
@@ -117,9 +117,9 @@ function sendEmail($email, $nome_do_remetente, $email_remetente, $newpwd)
     $mail->CharSet = 'iso-8859-1';
     ini_set('default_charset', 'ISO-8859-1');
     //
-    $mail->isSMTP(); //INFORMO QUE SER¡ VIA SMTP
+    $mail->isSMTP(); //INFORMO QUE SER√Å VIA SMTP
     $mail->SMTPDebug  = 0; //0 - Desligado, 1 - Mensagem Cliente, 2 - Mensagem Servidor e cliente
-    $mail->Host       = "mail.ipagesoftware.com.br";
+    $mail->Host       = HOST_EMAIL;
     $mail->Port       = "25";
     $mail->SMTPSecure = "tls";
     $mail->SMTPAuth   = true;
@@ -140,7 +140,7 @@ function sendEmail($email, $nome_do_remetente, $email_remetente, $newpwd)
 
     if (!$mail) {
         $json = array('id' => 'txtemail',
-            'msg'=> utf8_encode('Ocorreu um erro ao enviar o email de confirmaÁ„o do login, tente mais tarde!'),
+            'msg'=> utf8_encode('Ocorreu um erro ao enviar o email de confirma√ß√£o do login, tente mais tarde!'),
         );
         die(json_encode($json));        
     }
@@ -195,7 +195,7 @@ function getBody($assunto, $nome_do_remetente, $email_remetente, $newpwd)
     $b .= ' para realizar o login.';
     //
     $b .= '<br/><br/>';
-    $b .= '<b>NOTA: N√O … PRECISO RESPONDER ESTE EMAIL</b>';
+    $b .= '<b>NOTA: N√ÉO √â PRECISO RESPONDER ESTE EMAIL</b>';
     $b .= '<br/><br/><br/>';
     $b .= 'Sem mais para o momento, ';
     $b .= '<br/><br/>';
@@ -211,7 +211,7 @@ function getBody($assunto, $nome_do_remetente, $email_remetente, $newpwd)
     $b .= '<div style="font-size: 10px;">';
     $b .= '<br/>';
     //
-    $b .= 'AplicaÁ„o ';
+    $b .= 'Aplica√ß√£o ';
     $b .= '<b>';
     $b .= TITLE;
     $b .= '</b>.';
@@ -220,7 +220,7 @@ function getBody($assunto, $nome_do_remetente, $email_remetente, $newpwd)
     $b .= 'Navegador do tipo ';
     $b .= '<b>' . $_SERVER['HTTP_USER_AGENT'] . '</b>.';
     $b .= '<br/>';
-    $b .= 'EndereÁo de IP: <b>' . $_SERVER['REMOTE_ADDR'] . '</b>';
+    $b .= 'Endere√ßo de IP: <b>' . $_SERVER['REMOTE_ADDR'] . '</b>';
     $b .= '</div>';
     $b .= '</td>';
     $b .= '</tr>';
