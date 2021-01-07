@@ -523,53 +523,44 @@
 			"file": "CHANGELOG.md",
 			"settings":
 			{
-				"buffer_size": 3724,
+				"buffer_size": 11586,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/cadastros/cliente/addupdt.php",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 27048,
-				"encoding": "Western (Windows 1252)",
-				"line_ending": "Unix"
+				"buffer_size": 11994,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Searching 138 files for \"delReg(\"\n\n0 matches\n\nSearching 138 files for \"delReg\"\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\access\\usuarios\\js\\UsuariosIndex.js:\n   31            //\n   32          },\n   33:         delReg: function(id) {\n   34              var link = $(\"body\").data(\"url\");\n   35              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\cadastros\\cliente\\js\\ClienteIndex.js:\n   31            //\n   32          },\n   33:         delReg: function(id) {\n   34              var link = $(\"body\").data(\"url\");\n   35              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\cadastros\\empresa\\js\\EmpresaIndex.js:\n   31            //\n   32          },\n   33:         delReg: function(id) {\n   34              var link = $(\"body\").data(\"url\");\n   35              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\cadastros\\vendedor\\js\\VendedorIndex.js:\n   31            //\n   32          },\n   33:         delReg: function(id) {\n   34              var link = $(\"body\").data(\"url\");\n   35              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\banco\\js\\BancoIndex.js:\n   23              IpageApp.wait(false);\n   24          },\n   25:         delReg: function(id) {\n   26              var link = $(\"body\").data(\"url\");\n   27              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\cartao_credito\\js\\CartaoCreditoIndex.js:\n   23              IpageApp.wait(false);\n   24          },\n   25:         delReg: function(id) {\n   26              var link = $(\"body\").data(\"url\");\n   27              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\contas_pagar\\js\\ContasPagarIndex.js:\n   35              IpageApp.wait(false);\n   36          },\n   37:         delReg: function (id) {\n   38              var link = $(\"body\").data(\"url\");\n   39              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\contas_receber\\js\\ContasReceberIndex.js:\n   35              IpageApp.wait(false);\n   36          },\n   37:         delReg: function (id) {\n   38              var link = $(\"body\").data(\"url\");\n   39              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\formas_pagamento\\js\\FormasPagamentoIndex.js:\n   24              IpageApp.wait(false);\n   25          },\n   26:         delReg: function(id) {\n   27              var link = $(\"body\").data(\"url\");\n   28              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\plano_contas\\js\\PlanoContasIndex.js:\n   23              IpageApp.wait(false);\n   24          },\n   25:         delReg: function(id) {\n   26              var link = $(\"body\").data(\"url\");\n   27              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\estudo\\recibo\\js\\ReciboIndex.js:\n   27              IpageApp.wait(false);\n   28          },\n   29:         delReg: function (id) {\n   30              var link = $(\"body\").data(\"url\");\n   31              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\financeiro\\procedencia\\js\\ProcedenciaIndex.js:\n   31            //\n   32          },\n   33:         delReg: function(id) {\n   34              var link = $(\"body\").data(\"url\");\n   35              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\produto\\fabricante\\js\\FabricanteIndex.js:\n   24              IpageApp.wait(false);\n   25          },\n   26:         delReg: function(id) {\n   27              var link = $(\"body\").data(\"url\");\n   28              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\produto\\fornecedor\\js\\FornecedorIndex.js:\n   31            //\n   32          },\n   33:         delReg: function(id) {\n   34              var link = $(\"body\").data(\"url\");\n   35              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\produto\\grupo\\js\\GrupoIndex.js:\n   24              IpageApp.wait(false);\n   25          },\n   26:         delReg: function(id) {\n   27              var link = $(\"body\").data(\"url\");\n   28              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\produto\\produto\\js\\ProdutoIndex.js:\n   33              IpageApp.wait(false);\n   34          },\n   35:         delReg: function(id) {\n   36              var link = $(\"body\").data(\"url\");\n   37              link += \"src/Delete/ajax/delete_ajax.php\";\n\nC:\\xampp\\htdocs\\ipagesoftware.com.br\\aulas_javascript\\app\\scw\\github\\www\\application\\views\\produto\\um\\js\\UmIndex.js:\n   24              IpageApp.wait(false);\n   25          },\n   26:         delReg: function(id) {\n   27              var link = $(\"body\").data(\"url\");\n   28              link += \"src/Delete/ajax/delete_ajax.php\";\n\n17 matches across 17 files\n",
+			"file": "application/views/cadastros/cliente/class/ClienteIndex.php",
 			"settings":
 			{
-				"buffer_size": 5907,
+				"buffer_size": 18206,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 254 files for \"Total Reg.:\"\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\access\\usuarios\\class\\UsuariosIndex.php:\n  263          //\n  264          $this->pages     = new App\\Paginacao\\Paginator($num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  265:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $num_rows;\n  266          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  267          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\cadastros\\cliente\\class\\ClienteIndex.php:\n  183          //\n  184          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  185:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  186          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  187          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\cadastros\\empresa\\class\\EmpresaIndex.php:\n  171          //\n  172          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  173:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  174          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  175          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\cadastros\\vendedor\\class\\VendedorIndex.php:\n  183          //\n  184          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  185:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  186          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  187          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\estoque\\ajuste\\class\\AjusteIndex.php:\n  117        //\n  118        $this->pages = new App\\Paginacao\\Paginator($num_rows,9,array(6,3,6,9,12,25,50,100,250,'Tudo'));        \n  119:       $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu().$this->pages->display_items_per_page() . ' Total Reg.: ' . $num_rows;  \n  120        $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  121        //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\estoque\\movimentacao\\class\\MovimentacaoIndex.php:\n  149          //\n  150          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  151:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  152          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  153          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\financeiro\\procedencia\\class\\ProcedenciaIndex.php:\n  183          //\n  184          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  185:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  186          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  187          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\financeiro\\procedencia_users\\class\\ProcedenciaUsuario.php:\n  229          //\n  230          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, 9, array(15, 3, 6, 9, 12, 25, 50, 100, 250, 'Tudo'));\n  231:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  232          $this->sql .= ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  233      }\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\produto\\fabricante\\class\\FabricanteIndex.php:\n  178          //\n  179          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  180:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  181          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  182          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\produto\\fornecedor\\class\\FornecedorIndex.php:\n  183          //\n  184          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  185:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  186          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  187          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\produto\\grupo\\class\\GrupoIndex.php:\n  178          //\n  179          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  180:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  181          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  182          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\produto\\produto\\class\\ProdutoIndex.php:\n  184          //\n  185          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  186:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  187          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  188          //\n\nC:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\produto\\um\\class\\UmIndex.php:\n  178          //\n  179          $this->pages     = new App\\Paginacao\\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);\n  180:         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;\n  181          $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;\n  182          //\n\n13 matches across 13 files\n",
+			"settings":
+			{
+				"buffer_size": 7694,
 				"line_ending": "Windows",
 				"name": "Find Results",
 				"scratch": true
 			}
 		},
 		{
-			"file": "application/views/cadastros/cliente/js/ClienteIndex.js",
+			"file": "config.php",
 			"settings":
 			{
-				"buffer_size": 2351,
-				"encoding": "Western (Windows 1252)",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/js/ipageViews_original.js",
-			"settings":
-			{
-				"buffer_size": 43909,
-				"encoding": "Western (Windows 1252)",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Delete/ajax/delete_ajax.php",
-			"settings":
-			{
-				"buffer_size": 648,
+				"buffer_size": 9380,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -679,15 +670,33 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/application",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/assets",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/src",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/src/Delete",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/src/Delete/ajax"
+		"/C/Users/ipage/Documents/GitHub/scw",
+		"/C/Users/ipage/Documents/GitHub/scw/application",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/cliente",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/cliente/class",
+		"/C/Users/ipage/Documents/GitHub/scw/src",
+		"/C/Users/ipage/Documents/GitHub/scw/src/Paginacao"
 	],
 	"file_history":
 	[
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/access/usuarios/class/UsuariosIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/produto/um/class/UmIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/produto/produto/class/ProdutoIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/produto/grupo/class/GrupoIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/produto/fornecedor/class/FornecedorIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/produto/fabricante/class/FabricanteIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/financeiro/procedencia/class/ProcedenciaIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/estoque/movimentacao/class/MovimentacaoIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/empresa/class/EmpresaIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/vendedor/class/VendedorIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/cliente/class/ClienteIndex.php",
+		"/C/Users/ipage/Documents/GitHub/scw/src/Paginacao/Paginator.php",
+		"/C/Users/ipage/Documents/GitHub/scw/config.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/cliente/addupdt.php",
+		"/C/Users/ipage/Documents/GitHub/scw/application/views/cadastros/cliente/js/ClienteIndex.js",
+		"/C/Users/ipage/Documents/GitHub/scw/assets/js/ipageViews_original.js",
 		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/config.php",
 		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/application/views/access/usuarios/js/UsuariosAddUpdt.js",
 		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/github/www/application/views/produto/fornecedor/js/FornecedorAddUpdt.js",
@@ -799,23 +808,7 @@
 		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/cadastros/empresa/class/EmpresaDAO.php",
 		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/access/usuarios/addupdt.php",
 		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/produto/ajax/produto_ajax.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/produto/addupdt.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/autocomplete/formas_pagamento/FormasPagamentoAutocomplete.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/autocomplete/fabricante/FabricanteAutocomplete.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/autocomplete/codigo_interno/CodigoInternoAutocomplete.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/autocomplete/grupo/GrupoAutocomplete.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/autocomplete/plano_contas/PlanoContasAutocomplete.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/autocomplete/um/UmAutocomplete.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/produto/js/ProdutoAddUpdt.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/financeiro/plano_contas/addupdt.php",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/financeiro/plano_contas/js/PlanoContasAddUpdt.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/um/js/UmAddUpdt.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/grupo_modal/js/GrupoModal.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/grupo/js/GrupoAddUpdt.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/fabricante_modal/js/FabricanteModal.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/fabricante/js/FabricanteAddUpdt.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/financeiro/formas_pagamento_modal/js/FormasPagamentoModal.js",
-		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/financeiro/formas_pagamento/addupdt.php"
+		"/C/xampp/htdocs/ipagesoftware.com.br/aulas_javascript/app/scw/www/application/views/produto/produto/addupdt.php"
 	],
 	"find":
 	{
@@ -826,6 +819,7 @@
 		"height": 189.0,
 		"where_history":
 		[
+			"*.php",
 			"*.js",
 			"*",
 			"*.js",
@@ -952,8 +946,7 @@
 			"*.php",
 			"*AddUpdt.php",
 			"*Index.php",
-			"*.css",
-			"*Index.php"
+			"*.css"
 		]
 	},
 	"find_state":
@@ -961,6 +954,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Total Reg.:",
+			"$this->num_rows",
+			"num_rows",
+			"new App\\Paginacao\\Paginator(",
+			", 9, array(9, 3, 6, 9, 12, 25, 50, 100, 250, 'Tudo'));",
 			"deleteReg",
 			"delReg",
 			"delReg(",
@@ -1083,12 +1081,7 @@
 			"duplicidadeNome",
 			"$this->flag",
 			"$this->plano_contas_id",
-			"$this->plano_contas_status",
-			"$this->plano_contas_id",
-			"apenasLetras",
-			"$this->plano_contas_tipo",
-			"($this->plano_contas_natureza_operacao",
-			"$this->plano_contas_descricao"
+			"$this->plano_contas_status"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1096,6 +1089,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			", INITIAL_PAGINATION_NUMBER, PAGINATION);",
 			"empresa",
 			"Procedencia",
 			"",
@@ -1222,8 +1216,7 @@
 			"",
 			"return UNEXPECTED_ERROR;",
 			"",
-			"btn_",
-			"privados"
+			"btn_"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1234,7 +1227,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1243,15 +1236,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3724,
+						"buffer_size": 11586,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3724,
-								3724
+								11586,
+								11586
 							]
 						],
 						"settings":
@@ -1274,56 +1267,56 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1331,31 +1324,31 @@
 								"bh_unmatched_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1937.0,
+						"translation.y": 9708.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/views/cadastros/cliente/addupdt.php",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27048,
+						"buffer_size": 11994,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4870,
-								4870
+								11993,
+								11993
 							]
 						],
 						"settings":
@@ -1365,27 +1358,12 @@
 							{
 								"close":
 								{
-									"1":
-									[
-										6597,
-										6600
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"region.orangish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										4854,
-										4857
-									]
 								},
 								"unmatched":
 								{
@@ -1393,56 +1371,165 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10221.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/cadastros/cliente/class/ClienteIndex.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6076,
+								6076
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										6261,
+										6262
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1450,22 +1537,22 @@
 								"bh_unmatched_content"
 							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1824.0,
+						"translation.y": 3323.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5907,
+						"buffer_size": 7694,
 						"regions":
 						{
 							"match":
@@ -1474,72 +1561,56 @@
 								"regions":
 								[
 									[
-										261,
-										267
+										416,
+										427
 									],
 									[
-										582,
-										588
+										1001,
+										1012
 									],
 									[
-										903,
-										909
+										1592,
+										1603
 									],
 									[
-										1226,
-										1232
+										2185,
+										2196
 									],
 									[
-										1572,
-										1578
+										2764,
+										2775
 									],
 									[
-										1935,
-										1941
+										3355,
+										3366
 									],
 									[
-										2294,
-										2300
+										3955,
+										3966
 									],
 									[
-										2658,
-										2664
+										4577,
+										4588
 									],
 									[
-										3026,
-										3032
+										5112,
+										5123
 									],
 									[
-										3385,
-										3391
+										5707,
+										5718
 									],
 									[
-										3733,
-										3739
+										6292,
+										6303
 									],
 									[
-										4064,
-										4070
+										6881,
+										6892
 									],
 									[
-										4410,
-										4416
-									],
-									[
-										4735,
-										4741
-									],
-									[
-										5071,
-										5077
-									],
-									[
-										5411,
-										5417
-									],
-									[
-										5741,
-										5747
+										7460,
+										7471
 									]
 								],
 								"scope": ""
@@ -1548,8 +1619,8 @@
 						"selection":
 						[
 							[
-								585,
-								585
+								1025,
+								1025
 							]
 						],
 						"settings":
@@ -1568,70 +1639,75 @@
 								},
 								"unmatched":
 								{
+									"1":
+									[
+										4721,
+										4722
+									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content"
 							],
-							"default_dir": "C:\\xampp\\htdocs\\ipagesoftware.com.br\\2020\\dez\\kevin",
+							"default_dir": "C:\\Users\\ipage\\Documents\\GitHub\\scw\\application\\views\\cadastros\\cliente\\class",
 							"detect_indentation": false,
 							"line_numbers": false,
-							"output_tag": 2,
+							"output_tag": 1,
 							"result_base_dir": "",
 							"result_file_regex": "^([^ \t].*):$",
 							"result_line_regex": "^ +([0-9]+):",
@@ -1639,126 +1715,7 @@
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 57.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/cadastros/cliente/js/ClienteIndex.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2351,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1070,
-								1070
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1071,
-										1072
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"region.greenish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1055,
-										1056
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 451.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1766,19 +1723,19 @@
 				},
 				{
 					"buffer": 4,
-					"file": "assets/js/ipageViews_original.js",
+					"file": "config.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 43909,
+						"buffer_size": 9380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22213,
-								21090
+								0,
+								9380
 							]
 						],
 						"settings":
@@ -1788,203 +1745,74 @@
 							{
 								"close":
 								{
-									"1":
-									[
-										22256,
-										22257
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										21088,
-										21089
-									]
 								},
 								"unmatched":
 								{
+									"1":
+									[
+										4981,
+										4982
+									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 11020.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/Delete/ajax/delete_ajax.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 648,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								636,
-								636
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										640,
-										641
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										616,
-										617
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1992,14 +1820,14 @@
 								"bh_unmatched_content"
 							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1710.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

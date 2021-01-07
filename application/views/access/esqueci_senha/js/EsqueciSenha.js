@@ -111,9 +111,7 @@
               document.getElementById('img-key').src = "application/controles/captcha/pngimg.php?rnd=" + Math.random();
               //
               $('#img-key').load(function() {
-                  IpageApp.wait(false, function() {
-                      return callback ? callback(true) : false;
-                  });
+                  return callback ? callback(true) : false;
               });
           },
           enviar: function() {

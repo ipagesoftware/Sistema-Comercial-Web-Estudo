@@ -71,9 +71,7 @@ var GrupoModal = function() {
           window.parent.$("#myModal").modal('hide');
         });           
         //
-        IpageApp.wait(false, function(r){
-          $('#grupo_descricao').focus();
-        });
+        $('#grupo_descricao').focus();
     },
     submitForm: function() {
         if (verificaCampos() === false) {

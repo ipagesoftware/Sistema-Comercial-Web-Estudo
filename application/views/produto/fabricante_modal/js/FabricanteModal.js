@@ -71,9 +71,7 @@ var FabricanteModal = function() {
           window.parent.$("#myModal").modal('hide');
         });           
         //
-        IpageApp.wait(false, function(r){
-          $('#fabricante_descricao').focus();
-        });
+        $('#fabricante_descricao').focus();
     },
     submitForm: function() {
         if (verificaCampos() === false) {

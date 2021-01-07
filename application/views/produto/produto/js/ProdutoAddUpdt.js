@@ -77,42 +77,37 @@ var ProdutoAddUpdt = function() {
                         IpageApp.wait(true);
                     },
                     success: function(txt) {
-                        IpageApp.wait(false, function(result) {
-                            try {
-                                ret = JSON.parse(txt);
-                                //
-                                if (ret.error == true) {
-                                    ipageViews.notyMessage(ret.msg, "error", 3000, function(result) {
-                                        $("#produto_cod_barras").focus();
-                                    });
-                                    return;
-                                }
-                                //
-                                if(ipageViews.left(ret.imagem, 6)=="https:"){
-                                    imagem = ret.imagem;
-                                }else{
-                                    imagem += ret.imagem;
-                                }
-                                $(".foto-produto").attr("src", imagem);
-                                $("#produto_foto").val(imagem);
-                                $("#produto_descricao").val(ret.nome).addClass("ipage-result-cep");
-                                $("#produto_fabricante").val(ret.fabricante).addClass("ipage-result-cep");
-                                $("#produto_um").focus();
-                            } catch (e) {
-                                ipageViews.notyMessage(e, "error", 3000, function(result) {
+                        try {
+                            ret = JSON.parse(txt);
+                            //
+                            if (ret.error == true) {
+                                ipageViews.notyMessage(ret.msg, "error", 3000, function(result) {
                                     $("#produto_cod_barras").focus();
                                 });
+                                return;
                             }
-                        });
+                            //
+                            if(ipageViews.left(ret.imagem, 6)=="https:"){
+                                imagem = ret.imagem;
+                            }else{
+                                imagem += ret.imagem;
+                            }
+                            $(".foto-produto").attr("src", imagem);
+                            $("#produto_foto").val(imagem);
+                            $("#produto_descricao").val(ret.nome).addClass("ipage-result-cep");
+                            $("#produto_fabricante").val(ret.fabricante).addClass("ipage-result-cep");
+                            $("#produto_um").focus();
+                        } catch (e) {
+                            ipageViews.notyMessage(e, "error", 3000, function(result) {
+                                $("#produto_cod_barras").focus();
+                            });
+                        }
                         return false;
                     },
                     error: function(xhr, er) {
-                        IpageApp.wait(false, function(result) {
-                            ret = "Error " + xhr.status + " - " + xhr.statustext + "\nTipo de erro: " + er;
-                            ipageViews.notyMessage(ret, "error", 3000, function(result) {
-                                $("#produto_cod_barras").focus();
-                            });
-                            return false;
+                        ret = "Error " + xhr.status + " - " + xhr.statustext + "\nTipo de erro: " + er;
+                        ipageViews.notyMessage(ret, "error", 3000, function(result) {
+                            $("#produto_cod_barras").focus();
                         });
                         return false;
                     }
@@ -364,11 +359,7 @@ var ProdutoAddUpdt = function() {
                     } else {
                         $('#produto_codigo_interno').val($('#produto_grupo_id').val() + '.' + (parseInt(txt, 10) + 1));
                     }
-                    IpageApp.wait(false, function(r) {
-                        if (r) {
-                            $('#produto_codigo_interno').focus().select();
-                        }
-                    });
+                    $('#produto_codigo_interno').focus().select();
                 },
                 error: function(xhr, er) {
                     IpageApp.wait(false);

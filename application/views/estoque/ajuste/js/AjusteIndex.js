@@ -141,21 +141,13 @@ var Ajuste = function() {
                                 });
                                 break;
                             default:
-                                IpageApp.wait(false, function(r) {
-                                    if (r) {
-                                        jCritical("Ocorreu um erro " + txt + ", <br/>Entre em contato com o suporte técnico para maiores informações.", 'Atenção');
-                                    }
-                                });
+                                jCritical("Ocorreu um erro " + txt + ", <br/>Entre em contato com o suporte técnico para maiores informações.", 'Atenção');
                                 break;
                         }
                     },
                     // Se acontecer algum erro é executada essa função
                     error: function(txt) {
-                        IpageApp.wait(false, function(r) {
-                            if (r) {
-                                jCritical('Ocorreu um erro inesperado, tente mais tarde!', 'Erro');
-                            }
-                        });
+                        jCritical('Ocorreu um erro inesperado, tente mais tarde!', 'Erro');
                     }
                 });
                 return false;
