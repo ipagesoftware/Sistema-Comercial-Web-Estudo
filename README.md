@@ -526,3 +526,4 @@ https://www.paypal.com/donate?token=9RoUO8evLimoTEAdLTtywSoWGY0V6Can3f8OcYUg1yjY
 ## Apoie este projeto fazendo doações com o PIX
 
 pix: diogenesdias.nubank@gmail.com
+
