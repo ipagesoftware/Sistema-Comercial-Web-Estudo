@@ -181,7 +181,7 @@ class ProcedenciaIndex
             $this->num_rows = 1;
         }
         //
-        $this->pages     = new App\Paginacao\Paginator($this->num_rows, 9, array(9, 3, 6, 9, 12, 25, 50, 100, 250, 'Tudo'));
+        $this->pages     = new App\Paginacao\Paginator($this->num_rows, INITIAL_PAGINATION_NUMBER, PAGINATION);
         $this->paginacao = $this->pages->display_pages() . ' ' . $this->pages->display_jump_menu() . $this->pages->display_items_per_page() . ' Total Reg.: ' . $this->num_rows;
         $sql .= ' ORDER BY ' . $this->field_sort . ' ' . $this->order_sort . ' LIMIT ' . $this->pages->limit_start . ',' . $this->pages->limit_end;
         //

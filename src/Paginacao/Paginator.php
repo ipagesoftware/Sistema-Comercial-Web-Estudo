@@ -23,6 +23,7 @@ class Paginator
     protected $return;
     protected $get_ipp;
     protected $pagina_atual;
+    protected $all;
 
     /**
      * [__construct description]
@@ -30,8 +31,9 @@ class Paginator
      * @param integer $mid_range [description]
      * @param array   $ipp_array [description]
      */
-    public function __construct($total = 0, $mid_range = 7, $ipp_array = array(10, 25, 50, 100, "Tudo"))
+    public function __construct($total = 0, $mid_range = 7, $ipp_array = PAGINATION)
     {
+        $this->all = PAGINATION[sizeof(PAGINATION)-1];
         $tmp = explode("/", str_replace("index.php", null, $_SERVER['PHP_SELF']));
         $tmp = array_filter($tmp);
         $tmp = $tmp[sizeof($tmp)] . "/";
@@ -57,7 +59,7 @@ class Paginator
         $this->items_per_page = (isset($_GET["ipp"])) ? $_GET["ipp"] : $this->ipp_array[0];
         $this->default_ipp    = $this->ipp_array[0];
         //
-        if ($this->items_per_page == "Tudo") {
+        if ($this->items_per_page == $this->all) {
             $this->num_pages = 1;
         } else {
             if (!is_numeric($this->items_per_page) or $this->items_per_page <= 0) {
@@ -111,7 +113,7 @@ class Paginator
 
                 // loop through all pages. if first, last, or in range, display
                 if ($i == 1 or $i == $this->num_pages or in_array($i, $this->range)) {
-                    $this->return .= ($i == $this->current_page and $this->items_per_page != "Tudo") ? "<a title=\"Página $i de $this->num_pages\" class=\"current\" >$i</a> \n" : "<a class=\"paginate\" title=\"Página $i de $this->num_pages\" href=\"$this->pagina_atual?page=$i&ipp=$this->items_per_page $this->querystring\">$i</a> \n";
+                    $this->return .= ($i == $this->current_page and $this->items_per_page != $this->all) ? "<a title=\"Página $i de $this->num_pages\" class=\"current\" >$i</a> \n" : "<a class=\"paginate\" title=\"Página $i de $this->num_pages\" href=\"$this->pagina_atual?page=$i&ipp=$this->items_per_page $this->querystring\">$i</a> \n";
                 }
 
                 if ($this->range[$this->mid_range - 1] < $this->num_pages - 1 and $i == $this->range[$this->mid_range - 1]) {
@@ -119,13 +121,13 @@ class Paginator
                 }
 
             }
-            $this->return .= (($this->current_page < $this->num_pages and $this->total_items >= 10) and ($this->items_per_page != "Tudo") and $this->current_page > 0) ? "<a class=\"paginate\" href=\"$this->pagina_atual?page=" . ($this->current_page + 1) . "&ipp=$this->items_per_page $this->querystring\">Próximo</a>\n" : "<span class=\"inactive\">Próximo</span>\n";
-            $this->return .= ($this->items_per_page == "Tudo") ? "<a class=\"current\" style=\"margin-left:10px\" >Tudo</a> \n" : "<a class=\"paginate\" style=\"margin-left:10px\" href=\"$this->pagina_atual?page=1&ipp=Tudo$this->querystring\">Tudo</a> \n";
+            $this->return .= (($this->current_page < $this->num_pages and $this->total_items >= 10) and ($this->items_per_page != $this->all) and $this->current_page > 0) ? "<a class=\"paginate\" href=\"$this->pagina_atual?page=" . ($this->current_page + 1) . "&ipp=$this->items_per_page $this->querystring\">Próximo</a>\n" : "<span class=\"inactive\">Próximo</span>\n";
+            $this->return .= ($this->items_per_page == $this->all) ? "<a class=\"current\" style=\"margin-left:10px\" >{$this->all}</a> \n" : "<a class=\"paginate\" style=\"margin-left:10px\" href=\"$this->pagina_atual?page=1&ipp={$this->all}{$this->querystring}\">{$this->all}</a> \n";
         } else {
             for ($i = 1; $i <= $this->num_pages; $i++) {
                 $this->return .= ($i == $this->current_page) ? "<a class=\"current\" >$i</a> " : "<a class=\"paginate\" href=\"$this->pagina_atual?page=$i&ipp=$this->items_per_page $this->querystring\">$i</a> ";
             }
-            $this->return .= "<a class=\"paginate\" href=\"$this->pagina_atual?page=1&ipp=Tudo$this->querystring\">Tudo</a> \n";
+            $this->return .= "<a class=\"paginate\" href=\"$this->pagina_atual?page=1&ipp={$this->all}{$this->querystring}\">{$this->all}</a> \n";
         }
         $this->return = str_replace("&", "&amp;", $this->return);
 
@@ -133,7 +135,7 @@ class Paginator
         if (!is_numeric($this->items_per_page)) {
             //
             // Mostra apenas mil registros
-            // se a opção Tudo foi selecionada
+            // se a última opção do array PAGINATION foi selecionada
             //
             if ($total > 1000) {
                 $total = 1000;
@@ -147,7 +149,7 @@ class Paginator
             $this->items_per_page = 0;
         }
 
-        $this->limit_end = ($this->items_per_page == "Tudo") ? (int) $this->total_items : (int) $this->items_per_page;
+        $this->limit_end = ($this->items_per_page == $this->all) ? (int) $this->total_items : (int) $this->items_per_page;
     }
 
     /**
@@ -159,10 +161,14 @@ class Paginator
         $items = null;
         natsort($this->ipp_array); // This sorts the drop down menu options array in numeric order (with 'all' last after the default value is picked up from the first slot
         foreach ($this->ipp_array as $ipp_opt) {
-            $items .= ($ipp_opt == $this->items_per_page) ? "<option selected value=\"$ipp_opt\">$ipp_opt</option>\n" : "<option value=\"$ipp_opt\">$ipp_opt</option>\n";
+            if(!(int)$ipp_opt){
+                $items .= ($this->total_items == $this->items_per_page) ? "<option selected=\"\" value=\"{$ipp_opt}\">{$ipp_opt}</option>\n" : "<option value=\"{$ipp_opt}\">{$ipp_opt}</option>\n";
+            }else{
+                $items .= ($ipp_opt == $this->items_per_page) ? "<option selected=\"\" value=\"{$ipp_opt}\">{$ipp_opt}</option>\n" : "<option value=\"{$ipp_opt}\">{$ipp_opt}</option>\n";
+            }
         }
 
-        return "<span >Reg. por pág.: </span><select class=\"cbo-paginate\" onchange=\"window.location='$this->pagina_atual?page=1&amp;ipp='+this[this.selectedIndex].value+'$this->querystring';return false\">$items</select>\n";
+        return "<span >Reg. por pág.: </span><select class=\"cbo-paginate\" onchange=\"window.location='{$this->pagina_atual}?page=1&amp;ipp='+this[this.selectedIndex].value+'{$this->querystring}';return false\">$items</select>\n";
     }
     /**
      * [display_jump_menu description]
