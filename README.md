@@ -7,6 +7,40 @@ Esta aplicação tem o objetivo de ensinar conceitos da programação relacionad
 
 Saber criar um CRUD, entender como funcionam as requisições em AJAX, o que é um layout responsivo, como gerir banco de dados? Dentre outras rotinas do dia a dia do desenvolvimento web.
 
+## Características
+
+  * Compatível em PHP 7 ou superior
+  * Banco de dados em MySql
+  * Bootstrap
+  * JQuery
+  * Template SBAdmin
+  * Controle de rotas via .htaccess
+  * Criptografia dos dados ao realizar uam solicitação GET
+  * Gestão de variáveis de sessão com criptografia/descriptografia
+  * Classe para abstração de dados com PDO
+  * Log de usuários
+  * Log de exceções
+  * Classe para informações gerais da aplicação
+  * Api para consulta produtos pelo seu código EAN-13
+  * Classe para gerir paginação de dados
+  * Relatórios em PDF
+  * Classe para gestão de permissões de usuários a nível de tabela
+  * Api para consulta de cep
+  * Classe autoload padrão PSR-4
+  * Adição/atualização via ajax
+  * Encapsulamento de scripts em javascript
+  * Troca de informações entre modais
+  * Troca de informações entre PHP e javascript
+  * Criptografia 64 bits no envio de dados
+  * Técnica de callback em javascript
+  * Tratamento global de erros em javascript
+  * Scripts de autoload de dados nas input text
+  * Gestão de envio de e-mail com o pacote PHPMailer
+  * Controle de acesso via captcha com o comando imagecreatefrompng
+  * Script para evitar preenchimento automático de dados via robô
+  * Estrutura modular do projeto e organização das pastas
+  * Rotina de recuperação da senha do usuário através de e-mail
+  
 ## Visualizar
 
 https://www.ipagesoftware.com.br/scw/www/
