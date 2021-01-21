@@ -536,15 +536,14 @@ https://github.com/ipagesoftware/scw/blob/main/Manual%20configura%C3%A7%C3%A3o%2
 
 ## Nossos canais 
 
-## WhatsApp
-
-Grupo dedicado a aulas particulares de programação.
-https://chat.whatsapp.com/I8f5BSqSeSG9HoQYiNVYAf
-
 ## Telegram
-Grupo no Telegram:
-
+Grupos no Telegram:
+Grupo dedicado a aulas em PHP, Javascript, CSS, HTML e tecnologias diversas relacionadas a web.
 https://t.me/codigo_limpo
+
+## PHP Café
+Grupo dedicado a linguagem PHP, tecnologias diversas e ao bendito café.
+https://t.me/PHP_Cafe
 
 ## Web Site
 
