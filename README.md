@@ -1,4 +1,32 @@
 # Sistema Comercial Web - SCW (estudo)
+
+## Nossos canais 
+
+## Telegram
+Grupos no Telegram:
+Grupo dedicado a aulas em PHP, Javascript, CSS, HTML e tecnologias diversas relacionadas a web.
+https://t.me/codigo_limpo
+
+## PHP Café
+Grupo dedicado a linguagem PHP, tecnologias diversas e ao bendito café.
+https://t.me/PHP_Cafe
+
+## Web Site
+
+Site da Ipage:
+https://www.ipage.com.br/
+
+
+## Seja matenedor deste projeto
+
+https://www.paypal.com/donate?token=9RoUO8evLimoTEAdLTtywSoWGY0V6Can3f8OcYUg1yjYcinnnAxYrtoRDxs58j-3B1h--7rKAR8I805W
+
+
+## Apoie este projeto fazendo doações com o PIX
+
+pix: diogenesdias.nubank@gmail.com
+
+
 ## O projeto
 
 Aplicação de estudo CRUD estilo painel administrativo contruída com PHP, MariaDB, JavaScript, JQuery, HTML 5, CSS3 e BootStrap.
@@ -532,31 +560,3 @@ scw_estudo.sublime-project
 
 Você poderá ler um pequeno manual em PDF (Manual configuração SCW) que está na pasta raiz.
 https://github.com/ipagesoftware/scw/blob/main/Manual%20configura%C3%A7%C3%A3o%20SCW.pdf
-
-
-## Nossos canais 
-
-## Telegram
-Grupos no Telegram:
-Grupo dedicado a aulas em PHP, Javascript, CSS, HTML e tecnologias diversas relacionadas a web.
-https://t.me/codigo_limpo
-
-## PHP Café
-Grupo dedicado a linguagem PHP, tecnologias diversas e ao bendito café.
-https://t.me/PHP_Cafe
-
-## Web Site
-
-Site da Ipage:
-https://www.ipage.com.br/
-
-
-## Seja matenedor deste projeto
-
-https://www.paypal.com/donate?token=9RoUO8evLimoTEAdLTtywSoWGY0V6Can3f8OcYUg1yjYcinnnAxYrtoRDxs58j-3B1h--7rKAR8I805W
-
-
-## Apoie este projeto fazendo doações com o PIX
-
-pix: diogenesdias.nubank@gmail.com
-
