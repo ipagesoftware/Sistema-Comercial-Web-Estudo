@@ -3,7 +3,7 @@
  * @version    1.0
  * @package    Acesso
  * @subpackage Login
- * @author     DiÛgenes Dias <diogenesdias@hotmail.com>
+ * @author     Di√≥genes Dias <diogenesdias@hotmail.com>
  * @copyright  Copyright (c) 1995-2021 Ipage Software Ltd. (https://www.ipage.com.br)
  * @license    https://www.ipagesoftware.com.br/license_key/www/examples/license/
  */
@@ -27,7 +27,7 @@ class LoginValidar
         $this->sid->start();
         //
         if ($this->sid->check()) {
-            // Usu·rio j· logado
+            // Usu√°rio j√° logado
             $js = '<script>';
             $js .= 'window.parent.location.href="' . URL . '";';
             $js .= '</script>';
@@ -35,26 +35,26 @@ class LoginValidar
         }
     }
     /**
-     * Realiza o tratamento nas vari·veis global $_POST
+     * Realiza o tratamento nas vari√°veis global $_POST
      * @return [type] [description]
      */
     public function getValues()
     {
-        // CaptaÁ„o dados
+        // Capta√ß√£o dados
         $email   = $_POST['email'];
         $pwd     = $_POST['pwd'];        
         // Decodifica dados
         $email   = $this->decodeGET($email);
         $pwd     = $this->decodeGET($pwd);       
 
-        // Inicia as validaÁıes
-        // Verifica se o email È v·lido
+        // Inicia as valida√ß√µes
+        // Verifica se o email √© v√°lido
         // Remove os caracteres ilegais do email
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         //
         if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
             $json = array('id' => 'txtemail',
-                'msg'=> utf8_encode('O email possui caracteres inv·lidos ou foi digitado incorretamente, verifique!'),
+                'msg'=> utf8_encode('O email possui caracteres inv√°lidos ou foi digitado incorretamente, verifique!'),
             );
             return (json_encode($json));
         }
@@ -66,6 +66,33 @@ class LoginValidar
     }
 
     /**
+     * [totalProcedencia description]
+     * @return int Retorna o numero total de proced√™ncias
+     */
+    private function totalProcedencia()
+    {
+        $conn = ConnClass::getInstance();
+        $pdo  = $conn->openDatabase();
+        //
+        if (!$pdo) {
+            return 'Erro ao iniciar a conex√£o';
+        }
+
+        $sql = "SELECT COUNT(procedencia_id) AS total ";
+        $sql .= "FROM procedencia ";
+        $sql .= "WHERE procedencia_status = 1";
+        //
+        $query = $pdo->prepare($sql);
+        $query->execute();
+        $rs = $query->fetch(PDO::FETCH_BOTH);
+        //
+        if (!$query->rowCount()) {
+            return 0;
+        }
+        //
+        return $rs['total'];
+    }
+    /**
      * [logar description]
      * @return [type] [description]
      */
@@ -75,7 +102,7 @@ class LoginValidar
         $pdo  = $conn->openDatabase();
         //
         if (!$pdo) {
-            return 'Erro ao iniciar a conex„o';
+            return 'Erro ao iniciar a conex√£o';
         }
         //
         $sql = "SELECT";
@@ -94,22 +121,25 @@ class LoginValidar
         if ($query->rowCount()) {
             if ($rs['user_status'] == 0) {
                 $json = array('id' => 'txtemail',
-                    'msg'=> utf8_encode('O usu·rio informado est· desabilitado temporariamente. <br>Entre em contato com o usu·rio administrador para maiores informaÁıes!'),
+                    'msg'=> utf8_encode('O usu√°rio informado est√° desabilitado temporariamente. <br>Entre em contato com o usu√°rio administrador para maiores informa√ß√µes!'),
                 );
                 return (json_encode($json));
             }
-            // Verifica se o captcha È v·lido
-            $captcha = $_POST['captcha'];
-            $captcha = $this->decodeGET($captcha);
-            $ret = $this->getStatusCaptcha($captcha);
-            //
-            if (is_null($ret)) {
-                $json = array('id' => 'txtkey',
-                    'msg'=> utf8_encode('CÛdigo acesso inv·lido, verifique!'),
-                );
-                return (json_encode($json));
+
+            if(CAPTCHA){
+                // Verifica se o captcha √© v√°lido
+                $captcha = $_POST['captcha'];
+                $captcha = $this->decodeGET($captcha);
+                $ret = $this->getStatusCaptcha($captcha);
+                //
+                if (is_null($ret)) {
+                    $json = array('id' => 'txtkey',
+                        'msg'=> utf8_encode('C√≥digo acesso inv√°lido, verifique!'),
+                    );
+                    return (json_encode($json));
+                }
             }
-            // Define as vari·veis da sess„o para o login
+            // Define as vari√°veis da sess√£o para o login
             $this->sid->init(36000); // 60 * 60 * 10 = 36000 => 10 minutos
             $this->sid->addNode('start', date('d/m/Y - h:i'));
             $this->sid->addNode('user_id', $rs['user_id']);
@@ -117,12 +147,12 @@ class LoginValidar
             $this->sid->addNode('user_foto', $rs['user_foto']);
             $this->sid->addNode('user_email', strtolower($rs['user_email']));
             $this->sid->addNode('user_nivel', strtoupper($rs['user_nivel']));
-            // Os valores ser„o definidos no login da procedencia
-            // se o mÛdulo financeiro estiver definido como 1 no config.php
+            // Os valores ser√£o definidos no login da procedencia
+            // se o m√≥dulo financeiro estiver definido como 1 no config.php
             if(FINANCAS){
                 $this->sid->addNode('procedencia_id', 0);
                 $this->sid->addNode('procedencia_empresa', '');
-                $this->sid->addNode('procedencia_count', 0);
+                $this->sid->addNode('procedencia_count', $this->totalProcedencia());
             }
             // Se esta flag estiver definida como 1, envia um emial
             // comunicando o login bem sucedido.
@@ -131,7 +161,7 @@ class LoginValidar
                 //
                 if ($ret != 'OK') {
                     $json = array('id' => 'txtemail',
-                        'msg'=> utf8_encode('Ocorreu um erro ao enviar o email de confirmaÁ„o do login, tente mais tarde!'),
+                        'msg'=> utf8_encode('Ocorreu um erro ao enviar o email de confirma√ß√£o do login, tente mais tarde!'),
                     );
                     return (json_encode($json));
                 }
@@ -141,7 +171,7 @@ class LoginValidar
             //
         } else {
             $json = array('id' => 'txtemail',
-                'msg'=> utf8_encode('Usu·rio ou senha inv·lidos, verifique!'),
+                'msg'=> utf8_encode('Usu√°rio ou senha inv√°lidos, verifique!'),
             );
             return (json_encode($json));
         }
@@ -214,7 +244,7 @@ class LoginValidar
 
     /**
      * [sendEmail description]
-     * @param  O email do destinat·rio
+     * @param  O email do destinat√°rio
      * @param  O nome do remetente
      * @param  O email do remetente
      * @return booleano true se tudo certo ou false se algo saiu errado
@@ -224,7 +254,7 @@ class LoginValidar
         if (strtolower($_SERVER['HTTP_HOST']) == 'localhost') {
             return true;
         }
-        // Envia um e-mail para o usu·rio com a confirmaÁ„o da operaÁ„o
+        // Envia um e-mail para o usu√°rio com a confirma√ß√£o da opera√ß√£o
         $nome_do_remetente = ucwords(strtolower($nome_do_remetente));
         $emaildestinatario = $email;
         $current_date      = date("d/m/Y H:i:s");
@@ -238,7 +268,7 @@ class LoginValidar
         $mail->CharSet = 'iso-8859-1';
         ini_set('default_charset', 'ISO-8859-1');
         //
-        $mail->isSMTP(); //INFORMO QUE SER¡ VIA SMTP
+        $mail->isSMTP(); //INFORMO QUE SER√Å VIA SMTP
         $mail->SMTPDebug  = 0; //0 - Desligado, 1 - Mensagem Cliente, 2 - Mensagem Servidor e cliente
         $mail->Host       = HOST_EMAIL;
         $mail->Port       = "25";
@@ -294,26 +324,26 @@ class LoginValidar
 
         $b .= 'Oi ' . $nome_do_remetente . ',';
         $b .= '<br/><br/>';
-        $b .= 'AlguÈm usou recentemente sua senha para fazer login na aplicaÁ„o <b>' . APP_NAME . '</b>.';
+        $b .= 'Algu√©m usou recentemente sua senha para fazer login na aplica√ß√£o <b>' . APP_NAME . '</b>.';
         $b .= '<br/>';
-        $b .= 'Essa pessoa estava usando um aplicativo como um navegador ou um dispositivo mÛvel do tipo:<br /> <b>' . $_SERVER['HTTP_USER_AGENT'] . '</b>.';
+        $b .= 'Essa pessoa estava usando um aplicativo como um navegador ou um dispositivo m√≥vel do tipo:<br /> <b>' . $_SERVER['HTTP_USER_AGENT'] . '</b>.';
         $b .= '<br/>';
-        $b .= 'AtravÈs do endereÁo de IP: <b>' . $_SERVER['REMOTE_ADDR'] . '</b>';
+        $b .= 'Atrav√©s do endere√ßo de IP: <b>' . $_SERVER['REMOTE_ADDR'] . '</b>';
         $b .= '<br/>';
         $b .= '<br/>';
         //
-        $b .= 'Se foi vocÍ, este email pode ser ignorado com seguranÁa.';
+        $b .= 'Se foi voc√™, este email pode ser ignorado com seguran√ßa.';
         $b .= '<br/>';
         $b .= '<p>';
-        $b .= 'Se n„o tiver certeza de que foi vocÍ, um usu·rio mal-intencionado pode ter sua senha.';
+        $b .= 'Se n√£o tiver certeza de que foi voc√™, um usu√°rio mal-intencionado pode ter sua senha.';
         $b .= '<br/>';
-        $b .= 'Examine as atividades recentes e vamos ajud·-lo a realizar uma aÁ„o corretiva.';
+        $b .= 'Examine as atividades recentes e vamos ajud√°-lo a realizar uma a√ß√£o corretiva.';
         $b .= '<br/>';
-        $b .= 'FaÁa login em: ' . URL . ', e redefina sua senha imediatamente.';
+        $b .= 'Fa√ßa login em: ' . URL . ', e redefina sua senha imediatamente.';
         $b .= '</p>';
         //
         $b .= '<br/><br/>';
-        $b .= '<b>NOTA: N√O … PRECISO RESPONDER ESTE EMAIL</b>';
+        $b .= '<b>NOTA: N√ÉO √â PRECISO RESPONDER ESTE EMAIL</b>';
         $b .= '<br/><br/><br/>';
         $b .= 'Sem mais para o momento, ';
         $b .= '<br/><br/>';
@@ -329,7 +359,7 @@ class LoginValidar
         $b .= '<div style="font-size: 10px;">';
         $b .= '<br/>';
         //
-        $b .= 'AplicaÁ„o ';
+        $b .= 'Aplica√ß√£o ';
         $b .= '<b>';
         $b .= TITLE;
         $b .= '</b>.';
@@ -338,7 +368,7 @@ class LoginValidar
         $b .= 'Navegador do tipo ';
         $b .= '<b>' . $_SERVER['HTTP_USER_AGENT'] . '</b>.';
         $b .= '<br/>';
-        $b .= 'EndereÁo de IP: <b>' . $_SERVER['REMOTE_ADDR'] . '</b>';
+        $b .= 'Endere√ßo de IP: <b>' . $_SERVER['REMOTE_ADDR'] . '</b>';
         $b .= '</div>';
         $b .= '</td>';
         $b .= '</tr>';
