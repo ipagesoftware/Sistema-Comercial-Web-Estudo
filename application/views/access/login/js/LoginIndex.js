@@ -2,7 +2,7 @@
  * @version    1.0
  * @package    Acesso
  * @subpackage Login
- * @author     DiÛgenes Dias <diogenesdias@hotmail.com>
+ * @author     Di√≥genes Dias <diogenesdias@hotmail.com>
  * @copyright  Copyright (c) 1995-2021 Ipage Software Ltd. (https://www.ipage.com.br)
  * @license    https://www.ipagesoftware.com.br/license_key/www/examples/license/
  * 
@@ -16,12 +16,14 @@ $(document).ready(function() {
     Login.init();
 });
 /**
- * Classe para gerir a p·gina de login da aplicaÁ„o
+ * Classe para gerir a p√°gina de login da aplica√ß√£o
  * 
  * @return void
  */
 var Login = function() {
-    // MÈtodos privados
+    // Vari√°veis privadas
+    var captcha_src = $("#img-key").attr('src');
+    // M√©todos privados
     var handleEvents = function() {
         //// Habilita o uso da tecla enter nas caixas de texto
         //////
@@ -29,22 +31,22 @@ var Login = function() {
             var allInputs = $(':text:visible');
             if (event.keyCode == 13) {
                 event.preventDefault();
-                // A prÛxima entrada na minha coleÁ„o de todas as entradas
+                // A pr√≥xima entrada na minha cole√ß√£o de todas as entradas
                 var nextInput = allInputs.get(allInputs.index(this) + 1);
                 //
-                //// Verifica se È a ˙ltima caixa de texto
+                //// Verifica se √© a √∫ltima caixa de texto
                 ////////
                 if ($(this).data('last-input')) {
                     Login.submitForm();
                 } else if (nextInput) {
-                    // Passa o foco para prÛxima entrada se a entrada n„o for nula
+                    // Passa o foco para pr√≥xima entrada se a entrada n√£o for nula
                     nextInput.focus();
                 }
             }
         });
     };
     /**
-     * MÈtodo respos·vel pelos eventos das opÁ„oes
+     * M√©todo respos√°vel pelos eventos das op√ß√£oes
      * do form login
      * 
      * @param  valor opcional do prefixo do menu
@@ -69,7 +71,7 @@ var Login = function() {
         $("#btn_sair").click(function() {
             window.parent.location.href = URL;
         });
-        // Remove o tabindex do bot„o visualizar senha/ocultar
+        // Remove o tabindex do bot√£o visualizar senha/ocultar
         $(".input-group-btn, #toggle-password").attr('tabindex', -1);
         //
         setInterval(function(){
@@ -84,13 +86,14 @@ var Login = function() {
         }, 1000);
     }
     /**
-     * Realiza a validaÁ„o dos dados do form login
-     * @return true se a validaÁ„o foi bem sucedida
+     * Realiza a valida√ß√£o dos dados do form login
+     * @return true se a valida√ß√£o foi bem sucedida
      */
     function verificaCampos() {
-        var msg = 'Campo inv·lido ou inexistente, verifique!';
+        var msg = 'Campo inv√°lido ou inexistente, verifique!';
         var email = $("#txtemail").val();
         var pwd = $("#txtpwd").val();
+        var txtkey = $("#txtkey").val();
         //
         if (typeof(email) === 'undefined' || email.length === 0 || ipageViews.verificaEmail(email) === false) {
             ipageViews.notyMessage('Email: ' + msg, 'error', 2000, function(result) {
@@ -106,12 +109,13 @@ var Login = function() {
             return false;
         }
         //
-        txtkey = $("#txtkey").val();
-        if (typeof(txtkey) === 'undefined' || txtkey.length === 0) {
-            ipageViews.notyMessage('CÛdigo Acesso: ' + msg, 'error', 2000, function(result) {
-                $("#txtkey").focus();
-            });             
-            return false;
+        if(captcha_src!==undefined){
+            if (typeof(txtkey) === 'undefined' || txtkey.length === 0) {
+                ipageViews.notyMessage('C√≥digo Acesso2: ' + msg, 'error', 2000, function(result) {
+                    $("#txtkey").focus();
+                });             
+                return false;
+            }
         }
         //
         return true;
@@ -133,7 +137,7 @@ var Login = function() {
             });
         }
     }
-    // MÈtodos p˙blico da classe
+    // M√©todos p√∫blico da classe
     return {
         init: function() {
             $('#form1').attr("action", "javascript:Login.submitForm();void(0);");
@@ -142,7 +146,12 @@ var Login = function() {
             handleEvents();
             IpageApp.wait(false);
         },
-        change_captcha: function(callback) {
+        change_captcha: function(callback) {            
+            // Captcha desabilitado no config
+            if(captcha_src === undefined){
+                return callback ? callback(true) : false;
+            }
+            //
             IpageApp.wait(true);
             document.getElementById('img-key').src = "application/controles/captcha/pngimg.php?rnd=" + Math.random();
             //
@@ -187,8 +196,8 @@ var Login = function() {
                     }
                     if (msg == "OK") {
                         if (parseInt(financas, 10) == 1) {
-                            // ApÛs o login ser bem sucedido direciona para 
-                            // a seleÁ„o da procedÍnciado mÛdulo financeiro                    
+                            // Ap√≥s o login ser bem sucedido direciona para 
+                            // a sele√ß√£o da proced√™nciado m√≥dulo financeiro                    
                             window.parent.location.href = "sel_procedencia/";
                         } else {
                             window.parent.location.href = home;
@@ -215,7 +224,7 @@ var Login = function() {
             return false;
         },
         /**
-         * Faz a validaÁ„o dos dados ao submeter o formul·rio de login
+         * Faz a valida√ß√£o dos dados ao submeter o formul√°rio de login
          * @return false se algum erro ocorreu na tentativa de logar-se
          * no sistema
          */
