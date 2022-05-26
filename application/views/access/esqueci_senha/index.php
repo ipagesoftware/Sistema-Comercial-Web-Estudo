@@ -3,7 +3,7 @@
  * @version    1.0
  * @package    Acesso
  * @subpackage Esqueci a senha
- * @author     DiÛgenes Dias <diogenesdias@hotmail.com>
+ * @author     Di√≥genes Dias <diogenesdias@hotmail.com>
  * @copyright  Copyright (c) 1995-2021 Ipage Software Ltd. (https://www.ipage.com.br)
  * @license    https://www.ipagesoftware.com.br/license_key/www/examples/license/
  */
@@ -17,8 +17,8 @@ $sid    = Session::getInstance();
 $sid->start();
 //
 if ($sid->check()) {
-    // usu·rio logado, redireciona para a
-    // p·gina principal da aplicaÁ„o
+    // usu√°rio logado, redireciona para a
+    // p√°gina principal da aplica√ß√£o
     header('Location: ' . URL);
 }
 //
@@ -80,17 +80,19 @@ $index = (int) rand(0, sizeof($wall_paper) - 1);
                   <form method="post" name="form1" id="form1">
                       <!-- //-->
                       <div class="form-group">
-                          <!-- <label>Informe o endereÁo de email<span class="required">*</span></label> //-->
+                          <!-- <label>Informe o endere√ßo de email<span class="required">*</span></label> //-->
                           <input type="text" class="form-control" placeholder="E-mail" name="txtemail" id="txtemail" autofocus="" required="" autocomplete="off" value="">
                       </div>
-                      <div class="form-group input-group">
-                          <input type="text" class="form-control" placeholder="CÛdigo Acesso" name="txtkey" id="txtkey" data-last-input="1" maxlength="5" required="" autocomplete="off" value="">
-                          <span class="input-group-btn"><button class="btn btn-success" type="button" id="btn_captcha" style="width: 40px;" title="Atualizar CÛdigo Acesso"><i class="fa fa-refresh"></i></button></span>
-                      </div>
-                      <!-- //-->
-                      <div class="form-group">
-                        <img src="application/controles/captcha/pngimg.php" id="img-key" class="img-rounded" style="width:100%;height:50px;"/>
-                      </div>
+                      <?php if(CAPTCHA){ ?>
+                        <div class="form-group input-group">
+                            <input type="text" class="form-control" placeholder="C√≥digo Acesso" name="txtkey" id="txtkey" data-last-input="1" maxlength="5" required="" autocomplete="off" value="">
+                            <span class="input-group-btn"><button class="btn btn-success" type="button" id="btn_captcha" style="width: 40px;" title="Atualizar C√≥digo Acesso"><i class="fa fa-refresh"></i></button></span>
+                        </div>
+                        <!-- //-->
+                        <div class="form-group">
+                          <img src="application/controles/captcha/pngimg.php" id="img-key" class="img-rounded" style="width:100%;height:50px;"/>
+                        </div>
+                      <?php } ?>
                       <!-- Change this to a button or input when using this as a form -->
                       <button type="button" class="btn btn-default ipage-btn" id="btn_novo"><i class="fa fa-file-o"></i> Novo</button>
                       <button type="button" class="btn btn-success ipage-btn" id="btn_enviar"><i class="fa fa-envelope"></i> Enviar</button>
@@ -115,7 +117,7 @@ $index = (int) rand(0, sizeof($wall_paper) - 1);
         </div>
     </div>
   </div>
-  <!-- JANELA MODAL PARA BLOQUEAR USU¡RIO -->
+  <!-- JANELA MODAL PARA BLOQUEAR USU√ÅRIO -->
   <div class="modal fade" id="modal_lock_screen" tabindex="-1" role="dialog" data-keyboard="false", data-backdrop="static">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -123,12 +125,12 @@ $index = (int) rand(0, sizeof($wall_paper) - 1);
           <h4 class="modal-title"><?php echo (TITLE); ?><br />Acesso Bloqueado.</h4>
         </div>
         <div class="modal-body">
-          <p>N˙mero excessivo de tentativas de logar-se ao sistema, ser· necess·rio aguardar pelo seu desbloqueio em 5:00 min.</p>
+          <p>N√∫mero excessivo de tentativas de logar-se ao sistema, ser√° necess√°rio aguardar pelo seu desbloqueio em 5:00 min.</p>
         </div>
       </div>
     </div>
   </div>
-  <!-- FIM JANELA MODAL PARA BLOQUEAR USU¡RIO //-->
+  <!-- FIM JANELA MODAL PARA BLOQUEAR USU√ÅRIO //-->
   <!-- //-->
   <?php $layout->createCookie();?>
   <!-- //-->
