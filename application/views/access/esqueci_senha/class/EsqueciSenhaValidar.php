@@ -3,7 +3,7 @@
  * @version    1.0
  * @package    Acesso
  * @subpackage Esqueci a Senha
- * @author     DiÛgenes Dias <diogenesdias@hotmail.com>
+ * @author     Di√≥genes Dias <diogenesdias@hotmail.com>
  * @copyright  Copyright (c) 1995-2021 Ipage Software Ltd. (https://www.ipage.com.br)
  * @license    https://www.ipagesoftware.com.br/license_key/www/examples/license/
  */
@@ -29,7 +29,7 @@ class EsqueciSenhaValidar
     }
 
     /**
-     * CaptaÁ„o dos dados vindos do form
+     * Capta√ß√£o dos dados vindos do form
      * @return string
      */
     public function getValues()
@@ -39,30 +39,33 @@ class EsqueciSenhaValidar
         // Decodifica dados
         $email   = $this->decodeGET($email);
         //
-        // Inicia as validaÁıes
-        // Verifica se o email È v·lido
+        // Inicia as valida√ß√µes
+        // Verifica se o email √© v√°lido
         // Remove os caracteres ilegais do email
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         //
         if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
             $json = array('id' => 'txtemail',
-                'msg'=> utf8_encode('O email possui caracteres inv·lidos ou foi digitado incorretamente, verifique!'),
+                'msg'=> utf8_encode('O email possui caracteres inv√°lidos ou foi digitado incorretamente, verifique!'),
             );
             return (json_encode($json));
         }
         //
         $this->email = $email;
-        // Verifica se o captcha È v·lido
-        $captcha = $_POST['captcha'];
-        $captcha = $this->decodeGET($captcha);
-        $ret = $this->getStatusCaptcha($captcha);
         //
-        if (is_null($ret)) {
-            $json = array('id' => 'txtkey',
-                'msg'=> utf8_encode('CÛdigo acesso inv·lido, verifique!'),
-            );
-            return (json_encode($json));
-        }        
+        if(CAPTCHA){
+            // Verifica se o captcha √© v√°lido
+            $captcha = $_POST['captcha'];
+            $captcha = $this->decodeGET($captcha);
+            $ret = $this->getStatusCaptcha($captcha);
+            //
+            if (is_null($ret)) {
+                $json = array('id' => 'txtkey',
+                    'msg'=> utf8_encode('C√≥digo acesso inv√°lido, verifique!'),
+                );
+                return (json_encode($json));
+            } 
+        } 
         return 'OK';
     }
 
