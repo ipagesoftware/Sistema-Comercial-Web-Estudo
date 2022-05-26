@@ -60,6 +60,8 @@ define('URL_ATUAL', $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']);
 define('INITIAL_PAGE', 0);
 // Exibe a animação da carga da página
 define('WAIT', 1);
+// Se false não exibe o CAPTCHA
+define('CAPTCHA', 0);
 // 0 - Remove automaticamente a acentuação ao digitar algo nas caixas de texto
 // 1 - Aceita caracteres acentuados na inserção e edição dos dados
 define('ACENTUACAO', 0);
